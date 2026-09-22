@@ -3,31 +3,26 @@
   "version": "2.0.0",
   "private": true,
   "type": "module",
-  "description": "A repository review tool with CLI and MCP interfaces.",
+  "description": "A bounded local Git change inspector and validation CLI.",
   "bin": {
-    "inspector": "./dist/cli.js"
+    "inspector": "./dist/src/cli.js"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.build.json",
     "inspector": "tsx src/cli.ts",
-    "mcp-server": "tsx src/mcp-server.ts",
     "test": "vitest run",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.29.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   },
   "engines": {
-    "node": ">=20"
-  },
-  "overrides": {
-    "@hono/node-server": "2.0.10"
+    "node": "^20.19.0 || >=22.12.0"
   }
 }
